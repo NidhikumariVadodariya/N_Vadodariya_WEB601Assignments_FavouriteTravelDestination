@@ -1,12 +1,15 @@
 {
   "name": "web601-js5-assignment-1",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "componet": "generate the component",
+    "pipe": "generate pipe",
+    "directive": "generate directive"
   },
   "private": true,
   "dependencies": {
