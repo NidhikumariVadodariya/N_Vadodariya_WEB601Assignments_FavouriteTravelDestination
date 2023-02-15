@@ -1,0 +1,28 @@
+<p>content-list works!</p>
+<h1>My Favourite Sport person in this world</h1>
+<!--<ul class="content-list">
+  <li *ngFor="let content of contentList">
+    <app-content-card [content] ="content"></app-content-card>
+  </li>
+</ul>
+-->
+
+<div *ngFor="let content of contentArray; let i = index"
+     class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align:center"
+     [ngStyle]="{ border: i == 0 ? '2px solid black' : '1px solid gray' }">
+  <header class="content-card-header">
+    {{ content.title }}
+  </header>
+
+  <div class="content-card-body">
+    <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%" /></p>
+    <!--<p>{{ content.imgURL }}</p>-->
+    <p style="font-size:10px">{{ content.description }}</p>
+    <p><strong>Creator:</strong> {{ content.creator }}</p>
+    <p><strong>Type:</strong> {{ content.type }}</p>
+    <p>
+      <strong>Tags:</strong>
+      <span *ngFor="let tag of content.tags">{{ content.tags }}</span>
+    </p>
+  </div>
+</div>
