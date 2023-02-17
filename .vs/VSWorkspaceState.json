@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\WEB601_JS5_Assignment_1",
+    "\\WEB601_JS5_Assignment_1\\src",
+    "\\WEB601_JS5_Assignment_1\\src\\app",
+    "\\WEB601_JS5_Assignment_1\\src\\app\\content-card",
+    "\\WEB601_JS5_Assignment_1\\src\\app\\helper-files",
     "\\WEB601_JS5_Assignment_2",
     "\\WEB601_JS5_Assignment_2\\src",
     "\\WEB601_JS5_Assignment_2\\src\\app",
     "\\WEB601_JS5_Assignment_2\\src\\app\\content-list"
   ],
-  "SelectedNode": "\\WEB601_JS5_Assignment_2\\src\\app\\content-list\\content-list.component.spec.ts",
+  "SelectedNode": "\\WEB601_JS5_Assignment_2\\src\\app\\content-list\\content-list.component.html",
   "PreviewInSolutionExplorer": false
 }
