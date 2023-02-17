@@ -31,7 +31,7 @@ export class ContentListComponent {
     this.contentArray = [
       {
         id: 1,
-        country: "India",
+        country: "India", 
         destination: "Rajasthan",
         imgURL: "https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg",
         food: "Pani-Puri",
