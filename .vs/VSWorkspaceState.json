@@ -1,16 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WEB601_JS5_Assignment_1\\src",
-    "\\WEB601_JS5_Assignment_1\\src\\app",
-    "\\WEB601_JS5_Assignment_1\\src\\app\\content-card",
-    "\\WEB601_JS5_Assignment_1\\src\\app\\helper-files",
-    "\\WEB601_JS5_Assignment_2",
-    "\\WEB601_JS5_Assignment_2\\src",
-    "\\WEB601_JS5_Assignment_2\\src\\app",
-    "\\WEB601_JS5_Assignment_2\\src\\app\\content-list",
-    "\\WEB601_JS5_Assignment_2\\src\\app\\helper-files"
+    "\\WEB601_JS5_Assignment_3",
+    "\\WEB601_JS5_Assignment_3\\src",
+    "\\WEB601_JS5_Assignment_3\\src\\app",
+    "\\WEB601_JS5_Assignment_3\\src\\app\\content-list",
+    "\\WEB601_JS5_Assignment_3\\src\\app\\helper-files"
   ],
-  "SelectedNode": "\\WEB601_JS5_Assignment_2\\src\\app\\app.component.html",
+  "SelectedNode": "\\WEB601_JS5_Assignment_3\\src\\app\\type-filter.pipe.ts",
   "PreviewInSolutionExplorer": false
 }
