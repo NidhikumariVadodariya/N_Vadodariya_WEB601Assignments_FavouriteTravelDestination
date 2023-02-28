@@ -39,7 +39,7 @@ export class ContentListComponent {
         tags: ["#fabulous"],
       },
       {
-        id: 1,
+        id: 2,
         country: "France",
         destination: "Paris",
         imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2E1p-QwK1xX0PN1CMiauhKTfxDF9R1D3-Wg&usqp=CAU",
@@ -48,7 +48,7 @@ export class ContentListComponent {
         tags: ["#eyecatching"],
       },
       {
-        id: 2,
+        id: 3,
         country: "Switzerland",
         destination: "Geneva",
         imgURL: "https://a.cdn-hotels.com/gdcs/production125/d882/347f73d7-bd57-44cf-b3fa-0837c96cb193.jpg",
