@@ -27,6 +27,7 @@ export class ContentListComponent {
 
   contentArray: Content[];
 
+
   constructor() {
     this.contentArray = [
       {

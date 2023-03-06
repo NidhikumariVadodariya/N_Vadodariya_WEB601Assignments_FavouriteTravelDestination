@@ -81,7 +81,7 @@ export class ContentListComponent {
         id: 7,
         country: "United States",
         destination: "New York",
-        imgURL: "https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty.jpg?w=636&h=358",
+        //imgURL: "https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty.jpg?w=636&h=358",
         food: "Bhajiya",
         type: "Solo",
         tags: ["#amazing"],

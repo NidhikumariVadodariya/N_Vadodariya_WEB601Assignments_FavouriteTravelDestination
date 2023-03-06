@@ -24,7 +24,7 @@
 <hr />
 <br />
 
-<h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; font-size: 60px; background-color: lightgoldenrodyellow; color: darkolivegreen; "> No Type </h1>
+<h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; font-size: 40px; background-color: lightgoldenrodyellow; color: darkolivegreen; "> No Type </h1>
 
 <ul style="padding-left:300px">
   <li style="list-style-type: circle; font-family: 'Times New Roman', Times, serif;"
@@ -75,7 +75,7 @@
 
 <h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: palegreen; color: darkgreen; "> Friends trip </h1>
 
-<ul>
+<ul  style="padding-left:300px">
   <li style="list-style-type: circle; font-family:'Times New Roman', Times, serif"
       *ngFor="let content of contentArray | typeFilter: 'Friends'">
 
@@ -85,8 +85,6 @@
         {{content.country}}
       </h1>
       <div class="content-card-body">
-
-
 
         <!--<p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%;" /></p>
     <p style="font-size:20px">{{ content.destination }}</p>
@@ -126,7 +124,7 @@
 
 <h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: paleturquoise; color: darkblue; "> Family trip </h1>
 
-<ul>
+<ul style="padding-left:300px">
   <li style="list-style-type: circle; font-family: 'Times New Roman', Times, serif"
       *ngFor="let content of contentArray | typeFilter: 'Family'">
 
@@ -175,7 +173,7 @@
 
 <h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: pink; color: mediumvioletred; "> Solo trip </h1>
 
-<ul>
+<ul style="padding-left:300px">
   <li style="list-style-type: circle; font-family: 'Times New Roman', Times, serif"
       *ngFor="let content of contentArray | typeFilter: 'Solo'">
 
