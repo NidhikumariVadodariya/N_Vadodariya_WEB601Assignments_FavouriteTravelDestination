@@ -1,0 +1,29 @@
+.content-card{
+    border: 1px solid black;
+
+    &:first-child{
+        border: 3px solid green;
+    }
+
+    img{
+        width: 300px;
+        height: 500px;
+    }
+}
+.content-card.noType{
+   color: aqua; 
+   background-color: black;
+
+}
+.content-card.Adventure{
+    color: green;
+    background-color: rgba(221, 254, 6, 0.816);
+}
+.content-card.Action{
+    color: red;
+    background-color: rgb(204, 204, 199);
+}
+.content-card.noType{
+    color: aqua; 
+    background-color: black;
+}

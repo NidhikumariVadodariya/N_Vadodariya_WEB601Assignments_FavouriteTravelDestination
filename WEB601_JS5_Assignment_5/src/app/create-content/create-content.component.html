@@ -1,0 +1,20 @@
+<form style=" background-color: darkslategray; color: aquamarine;"> <br />
+
+  <div>
+
+    <h1 style="color:antiquewhite">Add new content  item</h1>
+    <label>ID: <input type="number" [(ngModel)]="newContent.id" name="id"></label> <br> <br />
+    <label>Country: <input type="text" [(ngModel)]="newContent.country" name="country"></label> <br> <br />
+    <label>Destination: <input type="text" [(ngModel)]="newContent.destination" name="destination"></label> <br> <br />
+    <label>ImgURL: <input type="text" [(ngModel)]="newContent.imgURL" name="imgURL"></label> <br> <br />
+    <label>Food: <input type="text" [(ngModel)]="newContent.food" name="food"></label> <br> <br />
+    <label>Type: <input type="text" [(ngModel)]="newContent.type" name="type"></label> <br> <br />
+    <label>Tags: <input type="text" [(ngModel)]="newContent.tags" name="tags"></label> <br> <br />
+    
+    <div>
+      <button (click)="addContent()">Add Content</button>
+    </div>
+
+  </div> <br />
+
+</form>
