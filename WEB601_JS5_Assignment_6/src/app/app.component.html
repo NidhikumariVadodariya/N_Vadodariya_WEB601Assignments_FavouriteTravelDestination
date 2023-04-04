@@ -1,2 +1,37 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<app-content-list></app-content-list>
+
+<!-- <app-content-list></app-content-list> -->
+<div class="container">
+
+  <div style="background-color:cadetblue; padding:10px; margin:5px; border-radius:2px; font-size:20px;">
+
+    <label for="contentId" style="font-display:15px">Enter Content ID:</label>
+    <input type="number" id="contentId" [(ngModel)]="id">
+    <button (click)="onRetrieveContentCard()" onclick=" document.getElementById('divContentCard').style.display = 'block';" style="font-size: 15px">Get Content</button>
+    <app-app-messages></app-app-messages>
+    
+  </div>
+  
+  <div id="divContentCard" style="display:none;">
+    <app-content-card [item]="contentCard"></app-content-card>
+  </div>
+ 
+  <app-content-list> </app-content-list>
+
+
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+  <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+

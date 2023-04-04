@@ -1,0 +1,44 @@
+<div [ngClass]="{'type1':item.type==='','type2': item.type === 'family', 'type3': item.type === 'friends','type4':item.type==='solo'}"></div>
+
+<div class="content-list">
+
+  <div class="card">
+
+    <h1 class="card-title" [innerHtml]="item.id" class="card-title"></h1>
+
+    <h2 class="card-header" [innerHtml]="item.country"></h2>
+
+  <div class="card-body">
+
+    <div class="content-card" style="text-align: center; color: indigo; margin-bottom: 50px">
+      <div style="display: table-cell; background-color: antiquewhite; border-radius: 10px; padding:50px; text-align:center">
+      <div [ngSwitch]="item.imgURL">
+       
+        <img *ngSwitchCase="''" src="{{Default}}" (click)="Onclick(item)" class="card-img-top" alt="...">
+        <img *ngSwitchDefault src="{{item.imgURL}}" (click)="Onclick(item)" class="card-img-top" alt="...">
+      </div>
+
+         <p style="font-size:20px">
+            <strong>Destination:</strong>
+          </p> {{ item.destination }}
+
+        <p style="font-size:20px">
+            <strong>Food:</strong>
+          </p> {{ item.food }}
+
+        <p style="font-size:20px" appHoverAffect hoverAffect="underline">
+            <strong>Type:</strong>
+          </p> {{ item.type }}
+        <br />
+
+          <strong style="font-size:20px">Tags:</strong>
+            <span *ngFor="let tag of item?.tags" appHoverAffect hoverAffect="bold">#{{tag}}
+            </span>
+
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+
+

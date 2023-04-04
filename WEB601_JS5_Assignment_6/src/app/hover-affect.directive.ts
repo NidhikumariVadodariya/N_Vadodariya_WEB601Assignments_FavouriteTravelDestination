@@ -1,32 +1,38 @@
-import { Directive, ElementRef, HostBinding, HostListener, Input } from '@angular/core';
+import { EmptyExpr } from '@angular/compiler';
+import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHoverAffect]'
 })
-
 export class HoverAffectDirective {
+ @Input('hoverAffect') hoverAffect: string="";
+  styleType: string | undefined;
+  // renderer: any;
+  // originalBorder: any;
 
-  @HostBinding('style.textDecoration') textDecoration: string | undefined;
-
-  @Input('appHoverAffect') hoverBoldStyle: string | undefined;
-
-  constructor(private el: ElementRef) { }
-
-  @HostListener('mouseenter') onMouseEnter() {
-    if (this.hoverBoldStyle === 'underline') {
-      this.el.nativeElement.style.textDecoration = 'underline';
-    }
-    else if (this.hoverBoldStyle === 'bold') {
+ 
+   
+  constructor(public el:ElementRef) { 
+    
+  }
+  
+   @HostListener('mouseenter') onMouseEnter(){
+    debugger
+     if (this.hoverAffect === 'underline') {
+       this.el.nativeElement.style.textDecoration = 'underline';
+     } else if (this.hoverAffect === 'bold') {
       this.el.nativeElement.style.fontWeight = 'bold';
     }
-  }
+ } 
+ 
+ 
+     @HostListener('mouseleave') onmouseleave(){
+     if (this.hoverAffect === 'underline') {
+        this.el.nativeElement.style.textDecoration = 'none';
+      } else if (this.hoverAffect === 'bold') {
+         this.el.nativeElement.style.fontWeight = 'normal';
+     }
+      
+   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    if (this.hoverBoldStyle === 'underline') {
-      this.el.nativeElement.style.textDecoration = 'none';
-    }
-    else if (this.hoverBoldStyle === 'bold') {
-      this.el.nativeElement.style.fontWeight = 'normal';
-    }
-  }
 }

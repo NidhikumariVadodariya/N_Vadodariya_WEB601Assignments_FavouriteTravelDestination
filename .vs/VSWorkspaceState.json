@@ -4,10 +4,13 @@
     "\\WEB601_JS5_Assignment_5",
     "\\WEB601_JS5_Assignment_5\\src",
     "\\WEB601_JS5_Assignment_5\\src\\app",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\content-list",
     "\\WEB601_JS5_Assignment_5\\src\\app\\create-content",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\helper-files"
+    "\\WEB601_JS5_Assignment_5\\src\\app\\helper-files",
+    "\\WEB601_JS5_Assignment_6",
+    "\\WEB601_JS5_Assignment_6\\src",
+    "\\WEB601_JS5_Assignment_6\\src\\app",
+    "\\WEB601_JS5_Assignment_6\\src\\app\\helper-files"
   ],
-  "SelectedNode": "\\WEB601_JS5_Assignment_5\\src\\app\\helper-files\\content-list.ts",
+  "SelectedNode": "\\WEB601_JS5_Assignment_6\\src\\app\\content-card\\content-card.component.html",
   "PreviewInSolutionExplorer": false
 }
