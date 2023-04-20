@@ -1,0 +1,31 @@
+<div class="modify-content">
+    <h1 style="text-align:center">Add New Content</h1>
+    <form style=" background-color: darkslategray; color: aquamarine; text-align:center">
+      <br />
+      <div class="form-group" style="margin:10px">
+        <label for="title">Country:</label>
+        <input type="text" class="form-control" id="country" [(ngModel)]="newContent.country" name="country" />
+      </div><br />
+      <div class="form-group" style="margin:10px">
+        <label for="description">Destination:</label>
+        <input type="text" class="form-control" id="destination" [(ngModel)]="newContent.destination" name="destination" />
+      </div><br />
+      <div class="form-group" style="margin:10px">
+        <label for="creator">Food:</label>
+        <input type="text" class="form-control" id="food" [(ngModel)]="newContent.food" name="food" />
+      </div><br />
+      <div class="form-group" style="margin:10px">
+        <label for="imgURL">Image URL:</label>
+        <input type="text" class="form-control" id="imgURL" [(ngModel)]="newContent.imgURL" name="imgURL" />
+      </div><br />
+      <div class="form-group" style="margin:10px">
+        <label for="type">Type:</label>
+        <input type="text" class="form-control" id="type" [(ngModel)]="newContent.type" name="type" />
+      </div><br />
+      <div class="form-group" style="margin:10px">
+        <label for="tags">Tags:</label>
+        <input type="text" class="form-control" id="tags" [(ngModel)]="newContent.tags" name="tags" />
+      </div><br />
+      <button style="margin:10px; padding:5px; text-align:center;" class="btn btn-primary" type="submit" (click)="addContent()">Add New Content</button>
+    </form>
+</div>

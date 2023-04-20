@@ -42,7 +42,7 @@ constructor(private contentService: MyFavouriteTravelDestinationsService,
        
       }
       else{
-        this.contentService.getSportsById(idNumber).subscribe(
+        this.contentService.getTravelsById(idNumber).subscribe(
           (contentCard: any) => {
             this.contentCard = contentCard;
             this.messageService.addMessageService(`Content Card at ID ${idNumber} retrieved`);

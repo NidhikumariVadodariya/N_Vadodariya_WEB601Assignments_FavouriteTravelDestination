@@ -14,7 +14,7 @@ export class MyFavouriteTravelDestinationsService {
     this.messageService.addMessageService('Content array loaded!');
     return of(contentDb);
   }
-  getSportsById(id: number): Observable<any> {
+  getTravelsById(id: number): Observable<any> {
     this.messageService.addMessageService(`Content Item at id: ${id}`);
     return of(contentDb.find(content => content.id === id)); // find id 1
   }
