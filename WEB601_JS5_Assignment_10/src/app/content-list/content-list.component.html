@@ -1,0 +1,272 @@
+<p>content-list works!</p>
+
+<app-modify-content (contentAdded)="onContentAdded($event)"></app-modify-content>
+
+<!--<h1 style="padding: 10px; margin: 10px; background-color: lightsalmon; color: crimson; ">Search Form <br />-->
+<!--<div>
+    <input style="margin:5px; padding:5px" type="text" placeholder="Search country here..." name="search" [(ngModel)]="searchText">
+    <button (click)="onSearch()" style="padding:5px">Search</button>
+    <p [ngClass]="{'error': !message.includes('Content with this title exists'), 'success': message.endsWith('exists')}">{{message}}</p>
+  </div>
+-->
+
+<div class="centered-form-field">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Search your country here..." name="search" [(ngModel)]="searchText">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onSearch()">Search</button>
+  <p [ngClass]="{'error': !message.includes('Content with this title exists'), 'success': message.endsWith('exists')}">{{message}}</p>
+</div>
+
+<!--</h1>-->
+
+<br />
+<hr />
+<br />
+
+<!--<h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; font-size: 40px; background-color: lightgoldenrodyellow; color: darkolivegreen; "> No Type </h1>
+-->
+
+<mat-expansion-panel>
+
+  <mat-expansion-panel-header>
+    <mat-panel-title style="font-size:20px">
+      Content with no type
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <ul style="padding-left:400px">
+    <li style="font-family: 'Times New Roman', Times, serif;"
+        *ngFor="let content of contentItems | filterContent: ''">
+
+      <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color: lightgoldenrodyellow; color: indigo; margin-bottom: 50px; ">
+
+        <h1 class="content-card-header" style="font-size:50px">
+          {{content.country}}
+        </h1>
+        <div class="content-card-body">
+
+          <!--  <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%;" /></p>
+          <p style="font-size:20px">{{ content.destination }}</p>
+          <p><strong>Creator:</strong> {{ content.food }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tags }}</span>
+          </p>-->
+
+
+          <p>
+            <img *ngIf="content.imgURL; else defaultURL" [src]="content.imgURL" alt="content image" style="width: 70%; border-radius: 10%;" />
+            <ng-template #defaultURL>
+              <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg"
+                   alt="default image" style="width: 70%; border-radius: 10%;" />
+            </ng-template>
+          </p>
+
+          <p style="font-size:20px">{{ content.destination }}</p>
+          <p style="font-size:20px"><strong>Food:</strong> {{ content.food }}</p>
+          <p style="font-size:20px" appHoverAffect="underline"><strong>Type:</strong> {{ content.type }}</p>
+          <p style="font-size:20px">
+            <strong>Tags:</strong>
+            <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </li>
+  </ul>
+
+</mat-expansion-panel>
+
+
+    <br />
+    <hr />
+    <br />
+
+<!--<h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: palegreen; color: darkgreen; "> Friends trip </h1>
+-->
+
+    <mat-expansion-panel>
+
+      <mat-expansion-panel-header>
+        <mat-panel-title style="font-size:20px">
+          Content with type: Friends
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+
+      <ul style="padding-left:400px">
+        <li style="font-family:'Times New Roman', Times, serif"
+            *ngFor="let content of contentItems | filterContent: 'Friends'">
+
+          <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color: palegreen; color: indigo; margin-bottom: 50px; ">
+
+            <h1 class="content-card-header" style="font-size:50px">
+              {{content.country}}
+            </h1>
+            <div class="content-card-body">
+
+              <!--<p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%;" /></p>
+          <p style="font-size:20px">{{ content.destination }}</p>
+          <p><strong>Creator:</strong> {{ content.food }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tags }}</span>
+          </p>-->
+
+
+              <p>
+                <img *ngIf="content.imgURL; else defaultURL" [src]="content.imgURL" alt="content image" style="width: 70%; border-radius: 10%;" />
+                <ng-template #defaultURL>
+                  <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg"
+                       alt="default image" style="width: 70%; border-radius: 10%;" />
+                </ng-template>
+              </p>
+
+              <p style="font-size:20px">{{ content.destination }}</p>
+              <p style="font-size:20px"><strong>Food:</strong> {{ content.food }}</p>
+              <p style="font-size:20px" appHoverAffect="underline"><strong>Type:</strong> {{ content.type }}</p>
+              <p style="font-size:20px">
+                <strong>Tags:</strong>
+                <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
+              </p>
+
+            </div>
+
+          </div>
+
+        </li>
+      </ul>
+
+      </mat-expansion-panel>
+
+        <br />
+        <hr />
+        <br />
+
+<!--        <h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: paleturquoise; color: darkblue; "> Family trip </h1>
+-->
+
+        <mat-expansion-panel>
+
+          <mat-expansion-panel-header>
+            <mat-panel-title style="font-size:20px">
+              Content with type: Family
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+
+          <ul style="padding-left:400px">
+            <li style="font-family: 'Times New Roman', Times, serif"
+                *ngFor="let content of contentItems | filterContent: 'Family'">
+
+              <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color: paleturquoise; color: indigo; margin-bottom: 50px; ">
+
+                <h1 class="content-card-header" style="font-size:50px">
+                  {{content.country}}
+                </h1>
+                <div class="content-card-body">
+
+                  <!--  <p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%;" /></p>
+          <p style="font-size:20px">{{ content.destination }}</p>
+          <p><strong>Creator:</strong> {{ content.food }}</p>
+          <p><strong>Type:</strong> {{ content.type }}</p>
+          <p>
+            <strong>Tags:</strong>
+            <span>{{ content.tags }}</span>
+          </p>-->
+
+                  <p>
+                  
+                    <img *ngIf="content.imgURL; else defaultURL" [src]="content.imgURL" alt="content image" style="width: 70%; border-radius: 10%;" />
+                    <ng-template #defaultURL>
+                      <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg"
+                           alt="default image" style="width: 70%; border-radius: 10%;" />
+                    </ng-template>
+                  </p>
+
+                  <p style="font-size:20px">{{ content.destination }}</p>
+                  <p style="font-size:20px"><strong>Food:</strong> {{ content.food }}</p>
+                  <p style="font-size:20px" appHoverAffect="underline"><strong>Type:</strong> {{ content.type }}</p>
+                  <p style="font-size:20px">
+                    <strong>Tags:</strong>
+                    <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
+                  </p>
+
+                </div>
+
+              </div>
+
+            </li>
+          </ul>
+
+          </mat-expansion-panel>
+
+            <br />
+            <hr />
+            <br />
+
+<!--            <h1 appHoverAffect="underline" style="padding: 10px; margin: 10px; background-color: pink; color: mediumvioletred; "> Solo trip </h1>
+-->
+
+ <mat-expansion-panel>
+
+          <mat-expansion-panel-header>
+            <mat-panel-title style="font-size:20px">
+              Content with type: Solo
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+
+
+            <ul style="padding-left:400px">
+              <li style="font-family: 'Times New Roman', Times, serif"
+                  *ngFor="let content of contentItems | filterContent: 'Solo'">
+
+                <div class="content-card" style="width: 40%; padding: 10px; margin: 10px; text-align: center; background-color: pink; color: indigo; margin-bottom: 50px; ">
+
+                  <h1 class="content-card-header" style="font-size:50px">
+                    {{content.country}}
+                  </h1>
+                  <div class="content-card-body">
+
+
+
+                    <!--<p><img src="{{ content.imgURL }}" alt="content image" style="width: 70%;" /></p>
+            <p style="font-size:20px">{{ content.destination }}</p>
+            <p><strong>Creator:</strong> {{ content.food }}</p>
+            <p><strong>Type:</strong> {{ content.type }}</p>
+            <p>
+              <strong>Tags:</strong>
+              <span>{{ content.tags }}</span>
+            </p>-->
+
+
+                    <p>
+                   <img *ngIf="content.imgURL; else defaultURL" [src]="content.imgURL" alt="content image" style="width: 70%; border-radius: 10%;" />
+                      <ng-template #defaultURL>
+                        <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg"
+                             alt="default image" style="width: 70%; border-radius: 10%;" />
+                      </ng-template>
+                    </p>
+
+                    <p style="font-size:20px">{{ content.destination }}</p>
+                    <p style="font-size:20px"><strong>Food:</strong> {{ content.food }}</p>
+                    <p style="font-size:20px" appHoverAffect="underline"><strong>Type:</strong> {{ content.type }}</p>
+                    <p style="font-size:20px">
+                      <strong>Tags:</strong>
+                      <span *ngFor="let tag of content.tags" appHoverAffect="bold">&emsp;{{ tag }}</span>
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </li>
+            </ul>
+    </mat-expansion-panel>
+
