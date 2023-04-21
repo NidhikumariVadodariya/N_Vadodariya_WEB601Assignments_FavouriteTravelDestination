@@ -2,16 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\WEB601_JS5_Assignment_5\\src",
-    "\\WEB601_JS5_Assignment_5\\src\\app",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\content-card",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\content-list",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\create-content",
-    "\\WEB601_JS5_Assignment_5\\src\\app\\helper-files",
-    "\\WEB601_JS5_Assignment_7",
+    "\\WEB601_JS5_Assignment_5\\src\\assets",
+    "\\WEB601_JS5_Assignment_6\\src",
+    "\\WEB601_JS5_Assignment_6\\src\\app",
+    "\\WEB601_JS5_Assignment_6\\src\\app\\content-card",
     "\\WEB601_JS5_Assignment_7\\src",
-    "\\WEB601_JS5_Assignment_7\\src\\app",
-    "\\WEB601_JS5_Assignment_7\\src\\app\\content-list"
+    "\\WEB601_JS5_Assignment_7\\src\\assets",
+    "\\WEB601_JS5_Assignment_8",
+    "\\WEB601_JS5_Assignment_8\\src",
+    "\\WEB601_JS5_Assignment_8\\src\\app"
   ],
-  "SelectedNode": "\\WEB601_JS5_Assignment_7\\src\\app\\content-list\\content-list.component.html",
+  "SelectedNode": "\\WEB601_JS5_Assignment_8\\src\\styles.scss",
   "PreviewInSolutionExplorer": false
 }

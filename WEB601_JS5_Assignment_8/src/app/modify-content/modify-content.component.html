@@ -1,0 +1,52 @@
+<mat-tab-group>
+  <mat-tab label="Add Content">
+    <div class="modify-content">
+      <h1 class="mat-h1">Add New Content</h1>
+      <form>
+        <div class="form-group">
+          <label>Country:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.country" name="country" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <label>Destination:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.destination" name="destination" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <label>Food:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.food" name="food" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <label>Image URL:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.imgURL" name="imgURL" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <label>Type:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.type" name="type" />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <label>Tags:</label>
+          <mat-form-field>
+            <input matInput type="text" [(ngModel)]="newContent.tags" name="tags" />
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit" (click)="addContent()">Add Content</button>
+      </form>
+    </div>
+  </mat-tab>
+  <mat-tab label="Adding Content with Dialog">
+    <div class="newcontent">
+      <h1 class="mat-h1">Adding Content with Dialog</h1>
+      <button mat-raised-button color="primary" (click)="openDialog()" class="newbutton">Add New Content</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>
